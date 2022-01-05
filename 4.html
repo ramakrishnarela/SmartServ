@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+padding-top:100px;
+background-color:#302f2f}
+
+.container {
+background-color:black;
+width:50%;
+height:400px;}
+
+input {
+width: 80%;
+padding:10px;
+margin:20px;
+display: block;
+border-radius:5px;
+}
+
+button {
+  background-color: #33cc33;
+  color: white;
+  width: 83%;
+padding:10px;
+margin:20px;
+display: block;
+border-radius:10px;
+cursor: pointer;
+}
+
+img {
+max-width: 80%;
+max-height: 100%;
+padding-top:20px;
+display: block; 
+}
+
+a {
+color :grey;
+}
+
+
+}
+</style>
+</head>
+<body>
+<center>
+<div class="container">
+<form name="form">
+    <img src="https://blog.smartserv.io/hs-fs/hubfs/Logo%20New-1.png?width=1174&name=Logo%20New-1.png" alt = "logo">
+
+    <input type="text" placeholder="Enter Username" name="uname" required>
+
+    <input type="password" placeholder="Enter Password" name="pwd" id="pwd" required>
+        
+    <button type="submit" onclick="test()">Login</button>
+    <a href="https://www.w3schools.com">Forgot your password?</a>
+
+  
+</form>
+</div>
+</center>
+</body>
+
+<script type="text/javascript">
+		function test() {
+			var pd,uname;
+            var username=document.form.uname.value;
+            var pwd = document.getElementById("pwd").value;
+            var mailformat = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+            if(pwd.match(/[a-z]/g) && pwd.match(/[A-Z]/g) && pwd.match(/[0-9]/g) && !(pwd.match(/[#$%^*()_+\-=\[\]{};':"\\|,.<>\/?]/g)))
+            	pd="TRUE";
+            else
+            	pd="FALSE";
+            if(username.match(mailformat))
+            	uname = "TRUE";
+            else
+            	uname = "FALSE"
+            if(uname=="TRUE" && pd == "TRUE" && pwd=="SmartServTest@123")
+				window.open('dashboard.html', '_blank');
+            else
+            	alert("Incorrect Details");   
+		}
+	</script>
+</html>
