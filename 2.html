@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.comp{
+border:2px solid black;
+float:left;
+width:45%;
+height:150px;
+margin-right:2%;
+}
+body{
+margin:2%;
+}
+</style>
+</head>
+<body>
+<div>
+<b>Import Products</b>
+</div>
+<div class="comp">
+<form>
+<p>Step 1: 	Select File</p>
+  <label for="myfile" style="margin-left:20%;"></label>
+  <input type="file" id="myfile" name="myfile" accept=".json" accept=".csv"><br><br>
+  <p style="margin-left:20%;">Supported File Type(s):.CSV,.JSON</p>
+</form>
+</div>
+<div class="comp">
+<form>
+<p>Step 2: 	Specify Format</p>
+ <label for="myfile" style="margin-left:8%;margin-right:15%;">File Type</label>
+  <select name="type" id="ftype">
+        <option value="CSV" selected>CSV</option>
+        <option value="JSON" >JSON </option>
+    </select>
+  <br>
+  <label for="char" style="margin-left:8%;margin-top:5px;margin-right:5%;">Character Encoding</label>
+  <select name="type" id="ctype">
+        <option value="UTF-8" selected>UTF-8</option>
+        <option value="UTF-16" >UTF-16 </option>
+    </select>
+  <br>
+  <label for="delim" style="margin-left:8%;margin-top:5px;margin-right:14%;">Delimiter</label>
+  <select name="type" id="dtype">
+        <option value="comma" selected>comma</option>
+        <option value="semicolon" >semicolon </option>
+    </select>
+  <br>
+  <label for="header" style="margin-left:8%;margin-top:5px;margin-right:12%;"> Has Header</label>
+  <input type="checkbox" id="header" name="header" value="has header" checked>
+</form>
+</div>
+</body>
+</html>
